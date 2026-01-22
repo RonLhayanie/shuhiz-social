@@ -17,7 +17,7 @@ export default function Recommendations() {
   // רשימת צילומי המסך של הוואטסאפ
   const testimonials = [
     "https://by-shuhiz.my.canva.site/21/_assets/media/31cc1e02d22a700c0a73e71604669ec4.jpg",
-    "https://by-shuhiz.my.canva.site/21/_assets/media/357ba94855430711cefa1a368c9b7c6b.jpg",
+    "https://i.ibb.co/xK6qCxN0/image-1.png",
     "https://by-shuhiz.my.canva.site/21/_assets/media/8bb65c877d2db77083072af7d925f4da.jpg",
     "https://by-shuhiz.my.canva.site/21/_assets/media/c9afac1ad764d8dbb29730733dd18c81.jpg", 
   ];
