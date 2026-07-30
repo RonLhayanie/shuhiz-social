@@ -3,7 +3,7 @@
 Marketing website for SHUHIZ, a Hebrew-language digital marketing and content studio.
 Built as a client project and deployed to Vercel.
 
-Live site: https://shuhizdigitalmarketing.vercel.app
+Live site: https://shuhiz.vercel.app
 
 ## What it is
 
