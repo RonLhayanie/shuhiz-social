@@ -33,12 +33,12 @@ export default function InstagramFeed() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* קו מפריד */}
+        {/* Divider */}
         <div className="w-full border-t-2 border-[#704724]/80 mb-16"></div>
 
         <div className="flex flex-col lg:flex-row items-start justify-between gap-16">
           
-          {/* צד ימין: טקסט גדול */}
+          {/* Right column: headline */}
           <div className="w-full lg:w-1/3 text-center lg:text-right sticky top-32 self-start">
             <h2 className="text-5xl md:text-7xl font-black leading-tight text-[#F0C9D9]">
               רגעים<br/>
@@ -51,13 +51,13 @@ export default function InstagramFeed() {
             </div>
           </div>
 
-          {/* צד שמאל: גריד הפוסטים */}
+          {/* Left column: post grid */}
           <div className="w-full lg:w-2/3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post, index) => (
                 <div key={index} className="flex flex-col">
                   
-                  {/* כותרת מעל התמונה */}
+                  {/* Caption above the image */}
                   <div className="py-2 text-center">
                     <h3 className="font-bold text-[#704724] text-lg tracking-wide">
                         {post.title}
@@ -66,7 +66,7 @@ export default function InstagramFeed() {
 
                   <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                     <div className="aspect-[4/5] w-full bg-white">
-                      {/* שיניתי כאן ל-object-contain כדי להבטיח שכל התמונה תופיע בלי חיתוכים */}
+                      {/* object-contain so the full image is visible without cropping */}
                       <img 
                         src={post.img} 
                         alt={post.title}

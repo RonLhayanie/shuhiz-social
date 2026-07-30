@@ -50,7 +50,7 @@ export default function Contact() {
             <a href="https://www.instagram.com/shuhizzz/" target="_blank" className="p-4 bg-gradient-to-tr from-yellow-400 to-purple-600 text-white rounded-full hover:opacity-90 transition-opacity">
                 <Instagram size={24} />
             </a>
-            {/* כפתור וואטסאפ החדש */}
+            {/* WhatsApp button */}
             <a 
                 href="https://wa.me/972549216966" 
                 target="_blank" 

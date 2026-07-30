@@ -6,24 +6,24 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
-        {/* --- חלק עליון: לוגו + כפתורים --- */}
+        {/* Top section: logo and buttons */}
         <div className="flex flex-col items-center justify-center text-center mb-12 space-y-6">
             
-            {/* לוגו */}
+            {/* Logo */}
             <img 
               src="https://by-shuhiz.my.canva.site/21/_assets/media/c553eb4d347c6272e041d39d8e3a392d.png" 
               alt="Shuhiz Logo" 
               className="w-72 md:w-96 object-contain"
             />
 
-            {/* כפתור שם - מסגרת חומה */}
+            {/* Name button, brown outline */}
             <div className="border border-[#704724] px-16 py-3 rounded-full bg-white shadow-sm">
                 <span className="text-[#F0C9D9] font-serif tracking-[0.2em] text-xl uppercase">
                     BY SHAHAR COHEN
                 </span>
             </div>
 
-            {/* כפתור לעבודות שלי */}
+            {/* Portfolio button */}
             <Link 
               href="/portfolio" 
               className="bg-[#F0C9D9] text-white px-10 py-3 rounded-full font-bold text-lg shadow-md hover:bg-[#704724] transition-all transform hover:-translate-y-1"
@@ -31,16 +31,16 @@ export default function Hero() {
                 לעבודות שלי
             </Link>
 
-            {/* קו מפריד עם כוכב */}
+            {/* Divider with star */}
             <div className="w-full max-w-4xl border-t-2 border-[#704724]/30 mt-8 relative">
                 <span className="absolute -left-2 -top-5 text-3xl text-[#704724]">✦</span>
             </div>
         </div>
 
-        {/* --- חלק תחתון: תמונה וטקסט (צמצום רווחים) --- */}
+        {/* Bottom section: image and copy */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           
-          {/* צד ימין: תמונה */}
+          {/* Right column: image */}
           <div className="relative w-full md:w-[40%] flex flex-col items-center">
             <div className="relative flex justify-center items-center">
               <div 
@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* צד שמאל: טקסט מעודכן */}
+          {/* Left column: copy */}
           <div className="w-full md:w-[60%] text-right space-y-4">
             <div className="text-4xl text-[#704724]">✦</div>
             
@@ -68,7 +68,7 @@ export default function Hero() {
                 אנחנו יודעים לזהות טרנד לפני שהוא קורה, ומדברים בשפה שהפיד מבין.
             </h2>
 
-            {/* הטקסט החדש */}
+            {/* Body copy */}
             <div className="text-gray-600 space-y-3 text-lg leading-relaxed">
                 <p>
                     שחר כהן, בת 21 מתל אביב – מייסדת שוחיז, סוכנות לשיווק ופרסום בדיגיטל.

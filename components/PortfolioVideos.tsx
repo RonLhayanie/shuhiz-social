@@ -13,7 +13,7 @@ export default function PortfolioVideos() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* כותרת מקצועית */}
+        {/* Section heading */}
         <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#704724] mb-4">
               סרטוני אווירה ועסקים
@@ -23,14 +23,14 @@ export default function PortfolioVideos() {
             </p>
         </div>
 
-        {/* גריד נקי - ללא מסגרות טלפון */}
+        {/* Clean grid, no phone frames */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {videos.map((src, index) => (
             <div 
               key={index} 
               className="group relative aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
             >
-              {/* הוידאו עצמו */}
+              {/* The video element */}
               <video 
                 src={src}
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
@@ -39,7 +39,7 @@ export default function PortfolioVideos() {
                 preload="metadata"
               ></video>
 
-              {/* אפקט עדין של מסגרת פנימית */}
+              {/* Subtle inner border effect */}
               <div className="absolute inset-0 rounded-2xl border border-black/5 pointer-events-none"></div>
             </div>
           ))}

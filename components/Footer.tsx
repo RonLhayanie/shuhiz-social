@@ -5,12 +5,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t-2 border-[#F0C9D9]/50 pt-10 pb-6"> {/* צמצום רווחים אנכיים */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* הקטנת רוחב הקונטיינר ל-6xl */}
+    <footer className="bg-white border-t-2 border-[#F0C9D9]/50 pt-10 pb-6"> {/* Reduced vertical spacing */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Container capped at 6xl */}
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 text-center md:text-right mb-8"> {/* צמצום gap */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 text-center md:text-right mb-8"> {/* Reduced gap */}
           
-          {/* עמודה 1: לוגו */}
+          {/* Column 1: logo */}
           <div className="flex flex-col items-center md:items-start space-y-3">
             <img 
               src="https://by-shuhiz.my.canva.site/21/_assets/media/c553eb4d347c6272e041d39d8e3a392d.png" 
@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* עמודה 2: ניווט */}
+          {/* Column 2: navigation */}
           <div className="flex flex-col space-y-2">
             <h4 className="font-bold text-[#F0C9D9] text-base mb-1">ניווט</h4>
             <Link href="/" className="text-[#704724] text-sm hover:text-[#F0C9D9] transition-colors font-medium">ראשי</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
             <Link href="#why-us" className="text-[#704724] text-sm hover:text-[#F0C9D9] transition-colors font-medium">למה שוחיז?</Link>
           </div>
 
-          {/* עמודה 3: יצירת קשר */}
+          {/* Column 3: contact */}
           <div className="flex flex-col space-y-2">
             <h4 className="font-bold text-[#F0C9D9] text-base mb-1">דברו איתי</h4>
             <a href="tel:0549216966" className="text-[#704724] hover:text-[#F0C9D9] transition-colors font-medium flex items-center justify-center md:justify-start gap-2">
@@ -49,7 +49,7 @@ export default function Footer() {
             </span>
           </div>
 
-          {/* עמודה 4: סושיאל (רק אינסטגרם) */}
+          {/* Column 4: social (Instagram only) */}
           <div className="flex flex-col items-center md:items-start space-y-3">
             <h4 className="font-bold text-[#F0C9D9] text-base">עקבו אחרינו</h4>
             <div>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
         </div>
-        {/* זכויות יוצרים - מחובר, בלי קו מפריד, טקסט קטן */}
+        {/* Copyright line */}
         <div className="text-center">
             <p className="text-gray-400 text-[10px] font-medium">
                 © {currentYear} SHUHIZ Digital Marketing. כל הזכויות שמורות.

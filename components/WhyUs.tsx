@@ -38,12 +38,12 @@ export default function WhyUs() {
     <section id="why-us" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center relative">
         
-        {/* כותרת גדולה */}
+        {/* Section heading */}
         <h2 className="text-6xl md:text-9xl font-black text-[#F0C9D9] uppercase tracking-tighter mb-20 opacity-40 select-none">
         ? WHY SHUHIZ
         </h2>
 
-        {/* גריד היתרונות */}
+        {/* Benefits grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 px-4 relative z-10 -mt-10 mb-24">
             {items.map((item, index) => (
                 <div key={index} className="flex flex-col items-center space-y-4 group hover:-translate-y-2 transition-transform duration-300">
@@ -60,7 +60,7 @@ export default function WhyUs() {
             ))}
         </div>
 
-       {/* --- חלק תחתון לפי התמונה --- */}
+       {/* Bottom section */}
         <div className=" pt-16 max-w-6xl mx-auto text-center flex flex-col items-center">
             <h3 className="text-3xl md:text-5xl font-black text-[#F0C9D9] leading-tight mb-8">
               כי שיווק טוב הוא לא רק מה שאתה אומר –<br /> אלא איך אתה גורם למישהו אחר להרגיש. 
