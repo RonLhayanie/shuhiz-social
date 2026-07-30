@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#F0C9D9", // ורוד בייבי (מהעיצוב)
-        accent: "#704724",  // חום כהה (מהעיצוב - לטקסטים וכפתורים)
+        primary: "#F0C9D9", // Baby pink (brand palette)
+        accent: "#704724",  // Dark brown (brand palette, text and buttons)
         background: "#ffffff",
       },
     },

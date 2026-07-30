@@ -2,7 +2,7 @@
 
 import { CheckCircle2, TrendingUp, Globe, Target } from 'lucide-react';
 
-// ממשק לפריט מדיה בודד (תמונה או וידאו)
+// A single media item (image or video)
 interface MediaItem {
   type: 'image' | 'video';
   src: string;
@@ -19,11 +19,11 @@ interface CaseStudyProps {
   results: { value: string; label: string }[];
   quote?: string;
   logo: string;
-  // שינוי: במקום mainImage ו-secondaryMedia, מקבלים מערך של מדיה
+  // Media is passed as one array instead of separate mainImage / secondaryMedia props
   mediaItems: MediaItem[];
   themeColor?: string;
   concept?: string;
-  // פרופ חדש לשליטה בהצגת הלוגו המעוגל בצד
+  // Controls whether the circular side logo is rendered
   showCircularLogo?: boolean; 
 }
 
@@ -31,12 +31,12 @@ export default function CaseStudy({
   clientName, subtitle, category, location, challenge, whatIDid, results, quote, logo, mediaItems, concept, themeColor = "#F0C9D9", showCircularLogo = true
 }: CaseStudyProps) {
   
-  // פונקציה לקביעת מחלקות הגריד בהתאם למספר הפריטים
+  // Picks grid classes based on how many media items there are
   const getGridClass = (count: number) => {
     if (count === 1) return 'grid-cols-1 max-w-md';
     if (count === 2) return 'grid-cols-2 max-w-lg';
     if (count === 3) return 'grid-cols-3 max-w-2xl';
-    return 'grid-cols-2'; // ברירת מחדל
+    return 'grid-cols-2'; // Default
   };
 
   const gridClass = getGridClass(mediaItems.length);
@@ -47,7 +47,7 @@ export default function CaseStudy({
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* צד ימין: הטקסט והנתונים (ללא שינוי) */}
+          {/* Right column: copy and metrics */}
           <div className="space-y-8 order-2 lg:order-1">
             <div>
                 <div className="flex items-center gap-3 mb-3">
@@ -116,10 +116,10 @@ export default function CaseStudy({
 
           </div>
 
-          {/* צד שמאל: תמונות וקריאייטיב (מעודכן) */}
+          {/* Left column: creative and media */}
           <div className="relative h-full min-h-[500px] flex flex-col items-center justify-center order-1 lg:order-2">
             
-            {/* רקע דקורטיבי - אם אין לוגו מעוגל, הלוגו יופיע כאן בגדול ובשקיפות */}
+            {/* Decorative background: with no circular logo, the logo renders here large and translucent */}
             <div 
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-3xl -z-10 opacity-20 bg-no-repeat bg-center bg-contain"
               style={{ 
@@ -129,7 +129,7 @@ export default function CaseStudy({
               }}
             ></div>
 
-            {/* לוגו עליון מעוגל - מוצג רק אם showCircularLogo הוא true */}
+            {/* Circular logo, rendered only when showCircularLogo is true */}
             {showCircularLogo && (
               <div className="w-40 h-40 bg-white rounded-full shadow-xl flex items-center justify-center p-4 border-4 mb-8 z-20 relative hover:scale-105 transition-transform duration-500" style={{ borderColor: `${themeColor}40` }}>
                   <img 
@@ -140,10 +140,10 @@ export default function CaseStudy({
               </div>
             )}
 
-            {/* גריד המדיה החדש והגמיש */}
+            {/* Media grid */}
             <div className={`grid ${gridClass} gap-4 w-full z-10 items-center`}>
                 {mediaItems.map((item, index) => {
-                  // חישוב רוטציה קלה לכל פריט בגריד
+                  // Slight rotation applied to each grid item
                   const rotation = mediaItems.length > 1 ? (index % 2 === 0 ? -3 : 3) : 0;
                   
                   return (
@@ -165,7 +165,7 @@ export default function CaseStudy({
                               className="w-full h-full object-cover"
                           />
                         )}
-                         {/* אפקט הבהרה במעבר עכבר */}
+                         {/* Hover lighten effect */}
                         <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300 pointer-events-none"></div>
                     </div>
                   );

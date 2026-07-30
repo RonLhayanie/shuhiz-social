@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // פונקציה לגלילה לאלמנטים (כמו "למה שוחיז")
+  // Scrolls to a section element (e.g. the "why shuhiz" section)
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
     if (pathname === '/') {
       e.preventDefault();
@@ -30,10 +30,10 @@ export default function Navbar() {
     }
   };
 
-  // --- חדש: פונקציה לגלילה לראש הדף ("ראשי") ---
+  // Scrolls back to the top of the page
   const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (pathname === '/') {
-      e.preventDefault(); // מונע רענון מיותר
+      e.preventDefault(); // Prevents a full page reload
       window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24">
             
-            {/* צד ימין: לוגו - הוספתי לו את הגלילה למעלה */}
+            {/* Right side: logo, scrolls to top on click */}
             <div className="flex-shrink-0 z-50">
               <Link 
                 href="/" 
@@ -66,11 +66,11 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* מרכז: תפריט ניווט (מוצג רק במסכים גדולים XL) */}
+            {/* Center: navigation menu, xl screens and up */}
             <div className="hidden xl:flex items-center space-x-8 space-x-reverse relative right-24">
               <Link 
                 href="/" 
-                onClick={handleScrollToTop} // הוספתי כאן את הגלילה למעלה
+                onClick={handleScrollToTop} // Scroll to top on click
                 className="text-base font-medium text-gray-600 hover:text-accent hover:bg-[#F0C9D9]/10 px-4 py-2 rounded-full transition-all cursor-pointer"
               >
                 ראשי
@@ -87,7 +87,7 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* צד שמאל: כפתורי קשר (מוצג רק במסכים גדולים XL) */}
+            {/* Left side: contact buttons, xl screens and up */}
             <div className="hidden xl:flex items-center gap-2 -ml-24">
               <a 
                 href="https://www.instagram.com/shuhizzz/" 
@@ -130,7 +130,7 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* כפתור המבורגר */}
+            {/* Hamburger button */}
             <div className="xl:hidden z-50">
               <button onClick={() => setIsOpen(!isOpen)} className="text-[#704724] p-2">
                 {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -141,10 +141,10 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* --- תפריט מובייל נפתח --- */}
+      {/* Mobile drawer menu */}
       <div className={`xl:hidden fixed inset-0 bg-white z-[100] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         
-        {/* חלק עליון */}
+        {/* Top area */}
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
             <button onClick={() => setIsOpen(false)} className="text-[#704724] p-2 bg-gray-50 rounded-full">
                 <X size={28} />
@@ -156,11 +156,11 @@ export default function Navbar() {
             />
         </div>
 
-        {/* מרכז: קישורים */}
+        {/* Center: links */}
         <div className="flex flex-col items-center justify-center space-y-6 mt-10">
             <Link 
               href="/" 
-              onClick={(e) => { handleScrollToTop(e); setIsOpen(false); }} // גם כאן הוספתי גלילה למעלה
+              onClick={(e) => { handleScrollToTop(e); setIsOpen(false); }} // Scroll to top on click
               className="text-3xl font-black text-[#704724] hover:text-[#F0C9D9] transition-colors"
             >
               ראשי
@@ -181,7 +181,7 @@ export default function Navbar() {
             </Link>
         </div>
 
-        {/* חלק תחתון */}
+        {/* Bottom area */}
         <div className="absolute bottom-8 left-0 right-0 px-6 flex flex-col gap-3">
             <a href="https://wa.me/972549216966" target="_blank" className="w-full bg-[#25D366] text-white py-3 rounded-full text-xl font-bold text-center shadow-md flex items-center justify-center gap-2">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24">

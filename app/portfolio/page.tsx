@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import PortfolioHero from '@/components/PortfolioHero'; // הייבוא של הקולאז'
+import PortfolioHero from '@/components/PortfolioHero'; // Collage import
 import PortfolioVideos from '@/components/PortfolioVideos';
 import CaseStudy from '@/components/CaseStudy';
 import { ArrowLeft, Star ,TrendingUp} from 'lucide-react';
@@ -22,7 +22,7 @@ export default function Portfolio() {
       location: "איטליה / אירופה",
       themeColor: "#F0C9D9", 
       logo: "https://by-shuhiz.my.canva.site/21/_assets/media/c5cafbb8ada02371db9bd57d02836d80.png",
-      // מבנה המדיה החדש
+      // Media items for this case study
       mediaItems: [
         { type: 'image', src: "https://by-shuhiz.my.canva.site/21/_assets/media/a89a1e56cfb53f11b72a6465512b0f09.png" },
         { type: 'image', src: "https://by-shuhiz.my.canva.site/21/_assets/media/331e263ff7781541f56bcf112ac41f91.png" }
@@ -50,7 +50,7 @@ export default function Portfolio() {
       location: "תל אביב",
       themeColor: "#A83E3E", 
       logo: "https://by-shuhiz.my.canva.site/21/_assets/media/889997b31ab0c2b71c39f08a5abfa0f8.png",
-      // מבנה המדיה החדש - תמונה ווידאו
+      // Media items: one image and one video
       mediaItems: [
         { type: 'image', src: "https://by-shuhiz.my.canva.site/21/_assets/media/980f34642807c1419b0ef87b24016e6b.png" },
         { type: 'video', src: "https://by-shuhiz.my.canva.site/21/_assets/video/3a389a11955b284c278bc96497a98a36.mp4" }
@@ -77,9 +77,9 @@ export default function Portfolio() {
       location: "ישראל",
       themeColor: "#D4AF37", 
       logo: "https://by-shuhiz.my.canva.site/21/_assets/media/c5856a25ce7faaaaaea31fe5f86f8d07.png",
-      // כאן הגדרנו showCircularLogo: false כדי להסתיר את הלוגו המעוגל
+      // showCircularLogo: false hides the circular logo for this case study
       showCircularLogo: false,
-      // הוספנו 3 תמונות למערך, כולל זו שהייתה בלוגו
+      // Three images, including the one previously used as the logo
       mediaItems: [
         { type: 'image', src: "https://by-shuhiz.my.canva.site/21/_assets/media/c5856a25ce7faaaaaea31fe5f86f8d07.png" },
         { type: 'image', src: "https://by-shuhiz.my.canva.site/21/_assets/media/a7a4db827019de44df99b6c90238e8b8.png" },
@@ -108,7 +108,7 @@ export default function Portfolio() {
       location: "תל אביב",
       themeColor: "#86A760", 
       logo: "https://by-shuhiz.my.canva.site/21/_assets/media/5c857a1a3ab0a82b0202f475ce7b43a8.png",
-      // כאן הגדרנו רק פריט אחד שהוא וידאו, והלוגו המעוגל יופיע כברירת מחדל
+      // Single video item; the circular logo is shown by default
       mediaItems: [
         { type: 'video', src: "https://by-shuhiz.my.canva.site/21/_assets/video/177ceb8f9def0df2c33f7e6349d9c457.mp4" }
       ],
@@ -141,13 +141,13 @@ export default function Portfolio() {
           <p className="text-gray-500 mt-2 text-lg">איך הפכנו אתגר לתוצאה</p>
       </div>
 
-      {/* לולאה על כל ה-Case Studies */}
+      {/* Render every case study */}
       {caseStudiesData.map((study) => (
-        // @ts-ignore - ההערה הזו נדרשת לפעמים בגלל בעיות טייפסקריפט קטנות עם פרופס אופציונליים, אבל הקוד עובד
+        // @ts-ignore - optional props on CaseStudy are not fully typed yet
         <CaseStudy key={study.id} {...study} />
       ))}
 
-      {/* הנעה לפעולה בסוף */}
+      {/* Closing call to action */}
       <section className="bg-[#704724] py-24 text-center text-white relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto px-4">
               <h2 className="text-3xl md:text-5xl font-black mb-6">

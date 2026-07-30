@@ -11,19 +11,19 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen">
       
-      {/* חלק עליון: לוגו, תמונה ראשית וטקסט */}
+      {/* Top section: logo, hero image and copy */}
       <Hero />
       
-      {/* אזור השירותים (הקוביות) */}
+      {/* Services section (cards) */}
       <Services />
 
       <InstagramFeed />
 
       <Recommendations />
-      {/* אזור היתרונות (6 האייקונים והטקסטים) */}
+      {/* Benefits section (6 icons with copy) */}
       <WhyUs />
       
-      {/* יצירת קשר ופוטר */}
+      {/* Contact and footer */}
       <Contact />
       <Footer />
       
